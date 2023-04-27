@@ -10,25 +10,28 @@
 </head>
 <body>
     <div class="container">
-        <div class="game">
+        <div class="game" id="game">
+            <div class="switch">
+                <input type="checkbox" onchange="theme()" name="theme" id="theme">
+            </div>
             <div class="titulo">
                 <h1>TicTacToe</h1>
             </div>
             <table class="tabla">
                 <tr class="filaUno">
-                    <td id="casillaUno"><button id='1' onclick="jugar('1', 'estadoUno')"><p id="estadoUno" class="estado">vacia</p></button></td>
-                    <td id="casillaDos"><button id="2" onclick="jugar('2', 'estadoDos')"><p id="estadoDos" class="estado">vacia</p></button></td>
-                    <td id="casillaTres"><button id="3" onclick="jugar('3', 'estadoTres')"><p id="estadoTres" class="estado">vacia</p></button></td>
+                    <td class="botono"><button id='1' onclick="jugar('1', 'estadoUno')"><p id="estadoUno" class="estado">vacia</p></button></td>
+                    <td class="botono"><button id="2" onclick="jugar('2', 'estadoDos')"><p id="estadoDos" class="estado">vacia</p></button></td>
+                    <td class="botono"><button id="3" onclick="jugar('3', 'estadoTres')"><p id="estadoTres" class="estado">vacia</p></button></td>
                 </tr>
                 <tr class="filaDos">
-                    <td id="casillaCuatro"><button id="4" onclick="jugar('4', 'estadoCuatro')"><p id="estadoCuatro" class="estado">vacia</p></button></td>
-                    <td id="casillaCinco"><button id="5" onclick="jugar('5', 'estadoCinco')"><p id="estadoCinco" class="estado">vacia</p></button></td>
-                    <td id="casillaSeis"><button id="6" onclick="jugar('6', 'estadoSeis')"><p id="estadoSeis" class="estado">vacia</p></button></td>
+                    <td id="boton"><button id="4" onclick="jugar('4', 'estadoCuatro')"><p id="estadoCuatro" class="estado">vacia</p></button></td>
+                    <td id="boton"><button id="5" onclick="jugar('5', 'estadoCinco')"><p id="estadoCinco" class="estado">vacia</p></button></td>
+                    <td id="boton"><button id="6" onclick="jugar('6', 'estadoSeis')"><p id="estadoSeis" class="estado">vacia</p></button></td>
                 </tr>
                 <tr class="filaTres">
-                    <td id="casillaSiete"><button id="7" onclick="jugar('7', 'estadoSiete')"><p id="estadoSiete" class="estado">vacia</p></button></td>
-                    <td id="casillaOcho"><button id="8" onclick="jugar('8', 'estadoOcho')"><p id="estadoOcho" class="estado">vacia</p></button></td>
-                    <td id="casillaNueve"><button id="9" onclick="jugar('9', 'estadoNueve')"><p id="estadoNueve" class="estado">vacia</p></button></td>
+                    <td id="boton"><button id="7" onclick="jugar('7', 'estadoSiete')"><p id="estadoSiete" class="estado">vacia</p></button></td>
+                    <td id="boton"><button id="8" onclick="jugar('8', 'estadoOcho')"><p id="estadoOcho" class="estado">vacia</p></button></td>
+                    <td id="boton"><button id="9" onclick="jugar('9', 'estadoNueve')"><p id="estadoNueve" class="estado">vacia</p></button></td>
                 </tr>
             </table>
             <div class="mensaje">
@@ -37,9 +40,13 @@
             <div class="botonaco">
                 <button id="restart" onclick="reset()"><img src="bxs-sushi.svg"> New Game</button>
             </div>
+            <div class="footer">
+                <p class="makeby">
+                    By: DeMarco
+                </p>
+            </div>
         </div>
     </div>
     <script src="main.js"></script>
-    <footer><p>By: DeMarco</p></footer>
 </body>
 </html>

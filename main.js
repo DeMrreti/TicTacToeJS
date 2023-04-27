@@ -4,6 +4,11 @@ var marca = "O"
 check = "vacia"
 var power = true
 
+function theme() {
+    document.getElementById("game").style.color = "white"
+    document.getElementById("game").style.backgroundColor = "#121212"
+}
+
 function pintarGanador(x1, x2, x3) {
     document.getElementById(x1).style.backgroundColor = "green"
     document.getElementById(x2).style.backgroundColor = "green"
@@ -74,7 +79,7 @@ function jugar(numero, casilla) {
             console.log("Entro en el segundo if")
             document.getElementById(numero).style.backgroundImage = "url('bx-radio-circle.svg')"
             document.getElementById(numero).style.backgroundRepeat = "no-repeat"
-            document.getElementById(numero).style.backgroundSize = "100px 100px"
+            document.getElementById(numero).style.backgroundSize = "100% 100%"
             document.getElementById(casilla).innerText = "O"
             document.getElementById("salida").innerText = " "
             comprobar()
@@ -82,7 +87,7 @@ function jugar(numero, casilla) {
             console.log("Entro en el else if")
             document.getElementById(numero).style.backgroundImage = "url('bx-x.svg')"
             document.getElementById(numero).style.backgroundRepeat = "no-repeat"
-            document.getElementById(numero).style.backgroundSize = "100px 100px"
+            document.getElementById(numero).style.backgroundSize = "100% 100%"
             document.getElementById(casilla).innerText = "X"
             document.getElementById("salida").innerText = " "
             comprobar()
