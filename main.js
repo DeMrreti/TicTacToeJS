@@ -3,10 +3,26 @@ var turno = 0
 var marca = "O"
 check = "vacia"
 var power = true
+const $themeDark = document.querySelector("#theme")
+
+
 
 function theme() {
-    document.getElementById("game").style.color = "white"
-    document.getElementById("game").style.backgroundColor = "#121212"
+    console.log($themeDark.checked)
+    if (!$themeDark) {
+        document.getElementById("game").style.color = "#121212"
+        document.getElementById("game").style.backgroundColor = "white"
+        for (let i = 1; i < 10; i++) {
+            document.getElementById((String)(i)).style.backgroundColor = "#121212"
+        } 
+    } else if ($themeDark) {
+        document.getElementById("game").style.color = "white"
+        document.getElementById("game").style.backgroundColor = "#121212"
+        for (let i = 1; i < 10; i++) {
+            document.getElementById((String)(i)).style.backgroundColor = "white"
+        }
+    }
+    
 }
 
 function pintarGanador(x1, x2, x3) {
@@ -76,16 +92,22 @@ function jugar(numero, casilla) {
     if (document.getElementById(casilla).innerHTML == check && power) {
         console.log("Entro en el primer if")
         if (turno % 2 == 0) {
-            console.log("Entro en el segundo if")
-            document.getElementById(numero).style.backgroundImage = "url('bx-radio-circle.svg')"
+            if (!$themeDark.checked) {
+                document.getElementById(numero).style.backgroundImage = "url('radio-circle-regular-24.png')"
+            } else {
+                document.getElementById(numero).style.backgroundImage = "url('radio-circle-regular-24-black.png')"
+            }
             document.getElementById(numero).style.backgroundRepeat = "no-repeat"
             document.getElementById(numero).style.backgroundSize = "100% 100%"
             document.getElementById(casilla).innerText = "O"
             document.getElementById("salida").innerText = " "
             comprobar()
         } else if (turno % 2 != 0) {
-            console.log("Entro en el else if")
-            document.getElementById(numero).style.backgroundImage = "url('bx-x.svg')"
+            if (!$themeDark.checked) {
+                document.getElementById(numero).style.backgroundImage = "url('x-regular-24.png')"
+            } else {
+                document.getElementById(numero).style.backgroundImage = "url('x-regular-24-balck.png')"
+            }
             document.getElementById(numero).style.backgroundRepeat = "no-repeat"
             document.getElementById(numero).style.backgroundSize = "100% 100%"
             document.getElementById(casilla).innerText = "X"
