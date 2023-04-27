@@ -17,7 +17,7 @@
 }
 
 .tabla {
-    height: 30%;
+    height: 28%;
 }
 
 .game {
@@ -36,6 +36,7 @@
     height: 10%;
     width: 100%;
 }
+
 
 #styleCheck {
     width: 20px;
@@ -85,8 +86,9 @@
 .switch {
     display: flex;
     width: 80%;
-    height: 10%;
+    height: 20%;
     justify-content: end;
+    align-items: center;
 }
 
 td {
@@ -114,7 +116,7 @@ button {
     display: flex;
     justify-content: end;
     align-items: end;
-    height: 20%;
+    height: 10%;
     color: rgb(106, 106, 106);
     width: 80%;
 }
