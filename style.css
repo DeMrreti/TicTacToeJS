@@ -20,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 #restart {
@@ -29,7 +29,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    border: none;
+    border: 1px solid;
     height: 50px;
     width: 200px;
 }
@@ -41,6 +41,8 @@
 .titulo {
     display: flex;
     justify-content: center;
+    height: 100px;
+    font-size: 30px
 }
 
 .mensaje {
@@ -68,3 +70,19 @@ button {
     height: 100px;
     border-radius: 1em;
 }
+
+@media (max-width: 500px) {
+    .tabla {
+        width: 80%;
+    }
+
+    .mensaje {
+        font-size: 10px;
+    }
+
+    button {
+        width: 100px;       
+        height: 100px;
+    }
+}
+  
